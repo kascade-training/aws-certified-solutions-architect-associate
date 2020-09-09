@@ -1,0 +1,22 @@
+<html>
+<script>
+
+function myFunction() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("my-demo").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "YOUR-API-GATEWAY-LINK-HERE", true);
+    xhttp.send();
+
+}
+
+</script>
+<body><div align="center"><br><br><br><br>
+<h1>Hello <span id="my-demo">IT Peac!</span></h1>
+<button onclick="myFunction()">Click me</button><br>
+<img src="https://media-exp1.licdn.com/dms/image/C561BAQF5rtpkO2sBAQ/company-background_10000/0?e=1599721200&v=beta&t=1zHOcSiEt9A6Yg5j-f1XSIfojz3yfbR1pbTx6cE2wD8"></div>
+</body>
+</html>
